@@ -1724,72 +1724,190 @@
 
     <!-- Modal for Tippers Available -->
     <div id="tipper-modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2><i class="fas fa-truck"></i> Tippers Available report - Target @ 100% </h2>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2><i class="fas fa-truck"></i> Tipper Fleet Management</h2>
+            <button class="close-btn" onclick="closeModal('tipper-modal')">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-section">
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
+                    <div style="flex: 1; min-width: 200px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Total Avl %</div>
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--primary);" id="Total Avl %">73%</div>
+                    </div>
+                    <div style="flex: 1; min-width: 200px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Day Shift AvaL %</div>
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--success);" id="Day Shift AvaL %">83%</div>
+                    </div>
+                    <div style="flex: 1; min-width: 200px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Night Shift Avail %</div>
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--warning);" id="Night Shift Avail %">78%</div>
+                    </div>
+                    <div style="flex: 1; min-width: 200px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Breakdown %</div>
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--danger);" id="Breakdown %">23%</div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
+                    <div style="flex: 1; min-width: 200px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Total Tippers</div>
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--primary);" id="total-tippers">12</div>
+                    </div>
+                    <div style="flex: 1; min-width: 200px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Day Shift Available</div>
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--success);" id="day-available">8</div>
+                    </div>
+                    <div style="flex: 1; min-width: 200px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Night Shift Available</div>
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--warning);" id="night-available">8</div>
+                    </div>
+                    <div style="flex: 1; min-width: 200px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Unavailable (Day/Night)</div>
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--danger);" id="unavailable-day-night">2</div>
+                    </div>
+                </div>
                 
-                <button class="close-btn" onclick="closeModal('tipper-modal')">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="modal-section">
-                    <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
-                        <div style="flex: 1; min-width: 200px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                            <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Total Avl %</div>
-                            <div style="font-size: 2rem; font-weight: 700; color: var(--primary);" id="Total Avl %">73 % </div>
-                        </div>
-                        <div style="flex: 1; min-width: 200px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                            <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Day Shift AvaL %</div>
-                            <div style="font-size: 2rem; font-weight: 700; color: var(--success);" id="Day Shift AvaL %">83 %</div>
-                        </div>
-                        <div style="flex: 1; min-width: 200px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                            <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Night Shift Avail %</div>
-                            <div style="font-size: 2rem; font-weight: 700; color: var(--warning);" id="Night Shift Avail %">78% </div>
-                        </div>
-                        <div style="flex: 1; min-width: 200px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                            <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Breakdown % </div>
-                            <div style="font-size: 2rem; font-weight: 700; color: var(--danger);" id="Breakdown %">23 %</div>
-                        </div>
-                    </div>
-                    <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
-                        <div style="flex: 1; min-width: 200px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                            <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Total Tippers</div>
-                            <div style="font-size: 2rem; font-weight: 700; color: var(--primary);" id="total-tippers">12</div>
-                        </div>
-                        <div style="flex: 1; min-width: 200px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                            <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Day Shift Available</div>
-                            <div style="font-size: 2rem; font-weight: 700; color: var(--success);" id="day-available">8</div>
-                        </div>
-                        <div style="flex: 1; min-width: 200px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                            <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Night Shift Available</div>
-                            <div style="font-size: 2rem; font-weight: 700; color: var(--warning);" id="night-available">8</div>
-                        </div>
-                        <div style="flex: 1; min-width: 200px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                            <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Unavailable (Day/Night)</div>
-                            <div style="font-size: 2rem; font-weight: 700; color: var(--danger);" id="unavailable-day-night">2</div>
-                        </div>
-                    </div>
-                    
-                    <div style="overflow-x: auto;">
-                        <table id="tippersTable" style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                            <thead>
-                                <tr style="background: #4a6491; color: white;">
-                                    <th style="padding: 12px 10px; text-align: left;">Tipper ID</th>
-                                    <th style="padding: 12px 10px; text-align: left;">Availability</th>
-                                    <th style="padding: 12px 10px; text-align: left;">MTD Avl Day/Night</th>
-                                    <th style="padding: 12px 10px; text-align: left;">Absent Remark</th>
-                                    <th style="padding: 12px 10px; text-align: left;">Total B/d Hours</th>
-                                    <th style="padding: 12px 10px; text-align: left;">MTD Trips</th>
-                                </tr>
-                            </thead>
-                            <tbody id="tableBody">
-                                <!-- Data populated by JavaScript -->
-                            </tbody>
-                        </table>
-                    </div>
+                <div style="overflow-x: auto;">
+                    <table id="tippersTable" style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <thead>
+                            <tr style="background: #4a6491; color: white;">
+                                <th style="padding: 12px 10px; text-align: left;">Tipper ID</th>
+                                <th style="padding: 12px 10px; text-align: left;">Availability</th>
+                                <th style="padding: 12px 10px; text-align: left;">MTD Avl Day/Night</th>
+                                <th style="padding: 12px 10px; text-align: left;">Absent Remark</th>
+                                <th style="padding: 12px 10px; text-align: left;">Total B/d Hours</th>
+                                <th style="padding: 12px 10px; text-align: left;">MTD Trips</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 12px 10px;"><strong>TIP-001</strong></td>
+                                <td style="padding: 12px 10px;">
+                                    <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 500; background: #e8f5e9; color: #2e7d32;">Available</span>
+                                </td>
+                                <td style="padding: 12px 10px;">85% / 82%</td>
+                                <td style="padding: 12px 10px; color: #999;">-</td>
+                                <td style="padding: 12px 10px;">2.5 hrs</td>
+                                <td style="padding: 12px 10px;">145</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee; background: #f9f9f9;">
+                                <td style="padding: 12px 10px;"><strong>TIP-002</strong></td>
+                                <td style="padding: 12px 10px;">
+                                    <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 500; background: #ffebee; color: #c62828;">Breakdown</span>
+                                </td>
+                                <td style="padding: 12px 10px;">45% / 40%</td>
+                                <td style="padding: 12px 10px;">Engine issue</td>
+                                <td style="padding: 12px 10px;">120 hrs</td>
+                                <td style="padding: 12px 10px;">78</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 12px 10px;"><strong>TIP-003</strong></td>
+                                <td style="padding: 12px 10px;">
+                                    <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 500; background: #fff3e0; color: #f57c00;">Maintenance</span>
+                                </td>
+                                <td style="padding: 12px 10px;">0% / 0%</td>
+                                <td style="padding: 12px 10px;">Scheduled service</td>
+                                <td style="padding: 12px 10px;">8 hrs</td>
+                                <td style="padding: 12px 10px;">0</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee; background: #f9f9f9;">
+                                <td style="padding: 12px 10px;"><strong>TIP-004</strong></td>
+                                <td style="padding: 12px 10px;">
+                                    <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 500; background: #e8f5e9; color: #2e7d32;">Available</span>
+                                </td>
+                                <td style="padding: 12px 10px;">92% / 88%</td>
+                                <td style="padding: 12px 10px; color: #999;">-</td>
+                                <td style="padding: 12px 10px;">1.2 hrs</td>
+                                <td style="padding: 12px 10px;">198</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 12px 10px;"><strong>TIP-005</strong></td>
+                                <td style="padding: 12px 10px;">
+                                    <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 500; background: #ffebee; color: #c62828;">Breakdown</span>
+                                </td>
+                                <td style="padding: 12px 10px;">30% / 35%</td>
+                                <td style="padding: 12px 10px;">Transmission failure</td>
+                                <td style="padding: 12px 10px;">45 hrs</td>
+                                <td style="padding: 12px 10px;">42</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee; background: #f9f9f9;">
+                                <td style="padding: 12px 10px;"><strong>TIP-006</strong></td>
+                                <td style="padding: 12px 10px;">
+                                    <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 500; background: #e8f5e9; color: #2e7d32;">Available</span>
+                                </td>
+                                <td style="padding: 12px 10px;">78% / 75%</td>
+                                <td style="padding: 12px 10px; color: #999;">-</td>
+                                <td style="padding: 12px 10px;">3.8 hrs</td>
+                                <td style="padding: 12px 10px;">167</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 12px 10px;"><strong>TIP-007</strong></td>
+                                <td style="padding: 12px 10px;">
+                                    <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 500; background: #fff3e0; color: #f57c00;">Maintenance</span>
+                                </td>
+                                <td style="padding: 12px 10px;">0% / 65%</td>
+                                <td style="padding: 12px 10px;">Tire replacement</td>
+                                <td style="padding: 12px 10px;">4 hrs</td>
+                                <td style="padding: 12px 10px;">23</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee; background: #f9f9f9;">
+                                <td style="padding: 12px 10px;"><strong>TIP-008</strong></td>
+                                <td style="padding: 12px 10px;">
+                                    <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 500; background: #e8f5e9; color: #2e7d32;">Available</span>
+                                </td>
+                                <td style="padding: 12px 10px;">88% / 84%</td>
+                                <td style="padding: 12px 10px; color: #999;">-</td>
+                                <td style="padding: 12px 10px;">1.5 hrs</td>
+                                <td style="padding: 12px 10px;">176</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 12px 10px;"><strong>TIP-009</strong></td>
+                                <td style="padding: 12px 10px;">
+                                    <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 500; background: #ffebee; color: #c62828;">Breakdown</span>
+                                </td>
+                                <td style="padding: 12px 10px;">15% / 20%</td>
+                                <td style="padding: 12px 10px;">Electrical issue</td>
+                                <td style="padding: 12px 10px;">32 hrs</td>
+                                <td style="padding: 12px 10px;">34</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee; background: #f9f9f9;">
+                                <td style="padding: 12px 10px;"><strong>TIP-010</strong></td>
+                                <td style="padding: 12px 10px;">
+                                    <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 500; background: #e8f5e9; color: #2e7d32;">Available</span>
+                                </td>
+                                <td style="padding: 12px 10px;">95% / 91%</td>
+                                <td style="padding: 12px 10px; color: #999;">-</td>
+                                <td style="padding: 12px 10px;">0.8 hrs</td>
+                                <td style="padding: 12px 10px;">215</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 12px 10px;"><strong>TIP-011</strong></td>
+                                <td style="padding: 12px 10px;">
+                                    <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 500; background: #e3f2fd; color: #1976d2;">On Trip</span>
+                                </td>
+                                <td style="padding: 12px 10px;">70% / 68%</td>
+                                <td style="padding: 12px 10px; color: #999;">-</td>
+                                <td style="padding: 12px 10px;">2.1 hrs</td>
+                                <td style="padding: 12px 10px;">132</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee; background: #f9f9f9;">
+                                <td style="padding: 12px 10px;"><strong>TIP-012</strong></td>
+                                <td style="padding: 12px 10px;">
+                                    <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 500; background: #fff3e0; color: #f57c00;">Maintenance</span>
+                                </td>
+                                <td style="padding: 12px 10px;">0% / 0%</td>
+                                <td style="padding: 12px 10px;">Annual service</td>
+                                <td style="padding: 12px 10px;">24 hrs</td>
+                                <td style="padding: 12px 10px;">0</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
     <!-- Modal for Excavators and Loaders -->
     <div id="excavator-loader-modal" class="modal">
