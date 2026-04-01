@@ -1751,20 +1751,20 @@
                 </div>
                 <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
                     <div style="flex: 1; min-width: 200px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                        <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Total Tippers</div>
-                        <div style="font-size: 2rem; font-weight: 700; color: var(--primary);" id="total-tippers">12</div>
+                        <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Total Trips</div>
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--primary);" id="total-tippers">1744</div>
                     </div>
                     <div style="flex: 1; min-width: 200px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                        <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Day Shift Available</div>
-                        <div style="font-size: 2rem; font-weight: 700; color: var(--success);" id="day-available">8</div>
+                        <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Day Shift Trips</div>
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--success);" id="day-available">727</div>
                     </div>
                     <div style="flex: 1; min-width: 200px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                        <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Night Shift Available</div>
-                        <div style="font-size: 2rem; font-weight: 700; color: var(--warning);" id="night-available">8</div>
+                        <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Night Shift Trips</div>
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--warning);" id="night-available">1017</div>
                     </div>
                     <div style="flex: 1; min-width: 200px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                        <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Unavailable (Day/Night)</div>
-                        <div style="font-size: 2rem; font-weight: 700; color: var(--danger);" id="unavailable-day-night">2</div>
+                        <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">Trips Gap</div>
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--danger);" id="unavailable-day-night">1357</div>
                     </div>
                 </div>
                 
@@ -4080,18 +4080,18 @@
         
         // Tipper Dashboard Functions
         const tippers = [
-            { id: "AP39UQ0095", dayAvailable: true, nightAvailable: true, ftdTrips: 18, totalTrips: 142, mtdDayAvailable: 14, mtdNightAvailable: 12, dayAbsentRemark: "", nightAbsentRemark: "" },
-            { id: "AP39UQ0097", dayAvailable: false, nightAvailable: false, ftdTrips: 22, totalTrips: 178, mtdDayAvailable: 16, mtdNightAvailable: 14, dayAbsentRemark: "Breakdown", nightAbsentRemark: "Breakdown" },
-            { id: "AP39UW9880", dayAvailable: true, nightAvailable: true, ftdTrips: 15, totalTrips: 115, mtdDayAvailable: 11, mtdNightAvailable: 9, dayAbsentRemark: "", nightAbsentRemark: "" },
-            { id: "AP39UW9881", dayAvailable: true, nightAvailable: true, ftdTrips: 25, totalTrips: 201, mtdDayAvailable: 18, mtdNightAvailable: 16, dayAbsentRemark: "", nightAbsentRemark: "" },
-            { id: "AP39UY4651", dayAvailable: false, nightAvailable: false, ftdTrips: 12, totalTrips: 98, mtdDayAvailable: 10, mtdNightAvailable: 8, dayAbsentRemark: "Maintenance", nightAbsentRemark: "Maintenance" },
-            { id: "AP39UY4652", dayAvailable: true, nightAvailable: false, ftdTrips: 20, totalTrips: 165, mtdDayAvailable: 14, mtdNightAvailable: 12, dayAbsentRemark: "", nightAbsentRemark: "Driver Leave" },
-            { id: "AP39WC0926", dayAvailable: true, nightAvailable: true, ftdTrips: 23, totalTrips: 189, mtdDayAvailable: 17, mtdNightAvailable: 15, dayAbsentRemark: "", nightAbsentRemark: "" },
-            { id: "AP39WC0927", dayAvailable: false, nightAvailable: false, ftdTrips: 19, totalTrips: 152, mtdDayAvailable: 15, mtdNightAvailable: 13, dayAbsentRemark: "Repair", nightAbsentRemark: "Repair" },
-            { id: "AP39WC0928", dayAvailable: true, nightAvailable: true, ftdTrips: 21, totalTrips: 172, mtdDayAvailable: 13, mtdNightAvailable: 11, dayAbsentRemark: "", nightAbsentRemark: "" },
-            { id: "AP39WF2052", dayAvailable: true, nightAvailable: true, ftdTrips: 16, totalTrips: 134, mtdDayAvailable: 12, mtdNightAvailable: 10, dayAbsentRemark: "", nightAbsentRemark: "" },
-            { id: "AP39WF2057", dayAvailable: false, nightAvailable: false, ftdTrips: 24, totalTrips: 196, mtdDayAvailable: 17, mtdNightAvailable: 15, dayAbsentRemark: "Servicing", nightAbsentRemark: "Tyre Puncture" },
-            { id: "AP39WF2058", dayAvailable: true, nightAvailable: false, ftdTrips: 14, totalTrips: 128, mtdDayAvailable: 11, mtdNightAvailable: 9, dayAbsentRemark: "", nightAbsentRemark: "Tyre Blast" }
+            { id: "AP39UQ0095", dayAvailable: false, nightAvailable: false, ftdTrips: 0, totalTrips: 78, mtdDayAvailable: 16, mtdNightAvailable: 14, dayAbsentRemark: "", nightAbsentRemark: "" },
+            { id: "AP39UQ0097", dayAvailable: false, nightAvailable: false, ftdTrips: 0, totalTrips: 32, mtdDayAvailable: 6, mtdNightAvailable: 4, dayAbsentRemark: "Breakdown", nightAbsentRemark: "Breakdown" },
+            { id: "AP39UW9880", dayAvailable: true, nightAvailable: true, ftdTrips: 7, totalTrips: 180, mtdDayAvailable: 21, mtdNightAvailable: 19, dayAbsentRemark: "", nightAbsentRemark: "" },
+            { id: "AP39UW9881", dayAvailable: true, nightAvailable: true, ftdTrips: 10, totalTrips: 196, mtdDayAvailable: 18, mtdNightAvailable: 21, dayAbsentRemark: "", nightAbsentRemark: "" },
+            { id: "AP39UY4651", dayAvailable: false, nightAvailable: false, ftdTrips: 0, totalTrips: 55, mtdDayAvailable: 10, mtdNightAvailable: 8, dayAbsentRemark: "Maintenance", nightAbsentRemark: "Maintenance" },
+            { id: "AP39UY4652", dayAvailable: true, nightAvailable: true, ftdTrips: 8, totalTrips: 148, mtdDayAvailable: 24, mtdNightAvailable: 12, dayAbsentRemark: "", nightAbsentRemark: "Driver Leave" },
+            { id: "AP39WC0926", dayAvailable: true, nightAvailable: true, ftdTrips: 10, totalTrips: 191, mtdDayAvailable: 27, mtdNightAvailable: 18, dayAbsentRemark: "", nightAbsentRemark: "" },
+            { id: "AP39WC0927", dayAvailable: true, nightAvailable: true, ftdTrips: 6, totalTrips: 190, mtdDayAvailable: 25, mtdNightAvailable: 23, dayAbsentRemark: "Repair", nightAbsentRemark: "Repair" },
+            { id: "AP39WC0928", dayAvailable: true, nightAvailable: true, ftdTrips: 12, totalTrips: 153, mtdDayAvailable: 23, mtdNightAvailable: 18, dayAbsentRemark: "", nightAbsentRemark: "" },
+            { id: "AP39WF2052", dayAvailable: true, nightAvailable: true, ftdTrips: 16, totalTrips: 147, mtdDayAvailable: 12, mtdNightAvailable: 10, dayAbsentRemark: "", nightAbsentRemark: "" },
+            { id: "AP39WF2057", dayAvailable: false, nightAvailable: false, ftdTrips: 24, totalTrips: 186, mtdDayAvailable: 17, mtdNightAvailable: 15, dayAbsentRemark: "Servicing", nightAbsentRemark: "Tyre Puncture" },
+            { id: "AP39WF2058", dayAvailable: true, nightAvailable: false, ftdTrips: 14, totalTrips: 188, mtdDayAvailable: 21, mtdNightAvailable: 19, dayAbsentRemark: "", nightAbsentRemark: "Tyre Blast" }
         ];
         
         function initTipperDashboard() {
